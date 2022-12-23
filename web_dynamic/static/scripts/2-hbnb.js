@@ -1,4 +1,3 @@
-#!/usr/bin/node
 window.onload = () => {
   let amenity_list = [];
 
@@ -17,16 +16,13 @@ window.onload = () => {
     });
   });
 
-//   fetch('http://0.0.0.0:5001/api/v1/status/')
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data.status === 'OK') {
-//         apiStatusDiv.classList.add('available');
-//       } else {
-//         apiStatusDiv.classList.remove('available');
-//       }
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
+  fetch('http://localhost:5001/api/v1/status/')
+    .then((response) => response.json())
+    .then((data => {
+      if (data.status === 'OK') {
+        apiStatusDiv.classList.add('available');
+      } else {
+        apiStatusDiv.classList.remove('available');
+      }
+    }));
 };
