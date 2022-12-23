@@ -13,7 +13,6 @@ window.onload = () => {
       } else {
         amenity_list.pop(this.parentNode.textContent);
       }
-    //   console.log(this.parentNode.textContent);
       h_amenities.innerHTML = amenity_list;
     });
   });
